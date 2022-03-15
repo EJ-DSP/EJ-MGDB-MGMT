@@ -1,0 +1,20 @@
+<div class="accordion toggle-icons " id="toggleIcons">    
+    {{# each clstLst}}
+            <div class="accordion-container" id='{{{this}}}'>
+                <div class="accordion-header" id="toggleIcons{{{this}}}">
+                    <a href="" class="text-uppercase collapsed" data-toggle="collapse" data-target="#toggleIconsCollapse{{{this}}}" aria-expanded="false" aria-controls="toggleIconsCollapse{{{this}}}">
+                        <i class='icon-database'></i> {{{this}}}
+                    </a>
+                </div>
+                <div id="toggleIconsCollapse{{{this}}}" class="collapse" aria-labelledby="toggleIcons{{{this}}}" data-parent="#toggleIcons">
+                    <div class="text-center">
+                        <div class="accordion-body" id='content'>
+                            <div class="spinner-border text-warning">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {{/each}}
+</div>

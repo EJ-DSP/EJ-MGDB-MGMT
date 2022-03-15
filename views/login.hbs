@@ -1,0 +1,47 @@
+<!-- Container start -->
+<div class="container">
+    <form action="/access/login" method="post">
+        <div class="row justify-content-md-center">
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+                <div class="login-screen">
+                    <div class='login-logo'>
+                        <a href="/">
+                            <img src="/images/Edward-Jones-logo_lg.png">
+                        </a>
+                    </div>                
+                    <div class="login-box">
+                        <div class='container'>
+                            {{>flash}}
+                        </div>
+                        <h5><b>Enter P/J Credentials below</b></h5>
+                        <div class='text-muted mb-1'><small><b>ENVIROMENT</b>: Development</small></div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="icon-user"></span></span>
+                                </div>
+                                <input type="text" class="form-control" name="username"  placeholder="Username" aria-label="P/J Username" >
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><span class="icon-lock1"></span></span>
+                                </div>
+                                <input type="text" class="form-control" name="password"  placeholder="*******" aria-label="Password" >
+                            </div>
+                        </div>
+                        <div class="actions mb-4">
+                            {{!-- <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="remember_pwd">
+                                <label class="custom-control-label" for="remember_pwd">Remember me</label>
+                            </div> --}}
+                            <button type="submit" class="btn btn-success">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- Container end -->

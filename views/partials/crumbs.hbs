@@ -1,0 +1,34 @@
+<!-- Page header start -->
+<div class="page-header">
+    <ol class="breadcrumb">
+    {{#each breadcrumb}}
+        {{#unless @last}}
+            <li class="breadcrumb-item" itemscope>
+                <a href="{{this.url}}" itemprop="url">
+                    <span itemprop="title">{{this.label}}</span>
+                </a>
+            </li>
+        {{else}}
+            <li class="breadcrumb-item">
+                <span>{{this.label}}</span>
+            </li>
+        {{/unless}}
+    {{/each}}
+    </ol>
+
+
+    {{!-- <ul class="app-actions">
+        <li>
+            <a href="#" id="reportrange">
+                <span class="range-text"></span>
+                <i class="icon-chevron-down"></i>	
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="icon-export"></i> Export
+            </a>
+        </li>
+    </ul> --}}
+</div>
+<!-- Page header end -->

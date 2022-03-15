@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>EJ Data Streaming Platform</title>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!--  Common Css Files  -->
+		<link rel="stylesheet" href="/template/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/template/fonts/style.css">
+		<link rel="stylesheet" href="/template/css/main.css">
+        <!-- Lobipanel css -->
+		<link rel="stylesheet" href="/template/vendor/lobipanel/css/lobipanel.css" />		
+
+        <link rel="stylesheet" href="/template/vendor/daterange/daterange.css" />
+
+        <link rel="stylesheet" href="/css/json-viewer.css">        
+        <link rel="stylesheet" href="/css/jqtree.css">     
+
+		<link rel="stylesheet" href="/css/override.css">
+    </head>
+
+    <body>
+  
+		<!-- Page wrapper start -->
+		<div class="page-wrapper">			
+            {{> sidebar}}
+			<!-- Page content start  -->
+			<div class="page-content">
+				{{> header}}
+                {{> crumbs}}
+
+                <!-- Main container start -->
+                <div class="main-container">
+                    {{> flash}}
+                    {{{ body }}}	                
+                </div>
+                <!-- Main container end -->
+
+                {{> footer}}
+			</div>
+			<!-- Page content end -->
+		</div>
+		<!-- Page wrapper end -->
+
+        <!-- Scripts -->
+        <script src="/template/js/jquery.min.js"></script> 
+		<script src="/template/js/jquery-ui.min.js"></script>
+        <script src="/template/js/bootstrap.bundle.min.js"></script>
+        <script src="/template/js/moment.js"></script>
+
+        <!-- Slimscroll JS -->
+        <script src="/template/vendor/slimscroll/slimscroll.min.js"></script>
+        <script src="/template/vendor/slimscroll/custom-scrollbar.js"></script>
+
+        <!-- Daterange -->
+        <script src="/template/vendor/daterange/daterange.js"></script>
+        <script src="/template/vendor/daterange/custom-daterange.js"></script>
+
+        <!-- Polyfill JS -->
+        <script src="/template/vendor/polyfill/polyfill.min.js"></script>
+
+        <!-- Jquery Tree -->
+        <script src="/js/tree.jquery.js"></script>
+
+        <!-- json viewer -->
+        <script src="/js/json-viewer.js"></script>
+        <script>
+            var jsonViewer = new JSONViewer();
+            if ($( "#json" ).length) {
+                // element exists
+                
+		        json_raw = document.querySelector("#json textarea");
+                document.querySelector("#json").appendChild(jsonViewer.getContainer());
+                json_parsed = JSON.parse(json_raw.value);
+                jsonViewer.showJSON(json_parsed,2);
+            }
+        </script>
+
+        <!-- Apex Charts -->
+        {{!-- <script src="/template/vendor/apex/apexcharts.min.js"></script>
+        <script src="/template/vendor/apex/sales/visitors.js"></script>
+        <script src="/template/vendor/apex/sales/deals.js"></script>
+        <script src="/template/vendor/apex/sales/income.js"></script>
+        <script src="/template/vendor/apex/sales/customers.js"></script> --}}
+
+		<!-- Slimscroll JS -->
+		<script src="/template/vendor/slimscroll/slimscroll.min.js"></script>
+		<script src="/template/vendor/slimscroll/custom-scrollbar.js"></script>
+
+		<!-- Lobipanel -->
+		<script src="/template/vendor/lobipanel/js/lobipanel.js"></script>
+		<script src="/template/vendor/lobipanel/js/lobipanel-custom.js"></script>
+		
+        <!-- Main JS -->
+        <script src="/template/js/main.js"></script>
+    </body>
+</html>

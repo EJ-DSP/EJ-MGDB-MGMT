@@ -1,0 +1,74 @@
+<!-- Row starts -->
+<div class="row gutters">
+	<!-- cluster list -->
+	<div class="col-xl-2 col-lg-4 col-md-4 col-sm-12 col-12">	
+		{{> mgdb/clstList }}
+	</div>
+	
+	<!-- Main Body -->
+	<div class="col-xl-10 col-lg-8 col-md-8 col-sm-12 col-12">
+		<!-- Summary Body -->
+		<div class="row gutters">
+			<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12">
+				<div class="card  lobipanel-minimize">
+					<div class="card-header">
+						<div class="card-title" style="max-width: calc(100% - 36px);">Collection Summary</div>
+					</div>
+					<div class="card-body">
+						<!-- database/collection Summary -->
+						<ul class="colSummary">
+							<li>Index Count : <span id="db_ColIdxCount">0</span></li>
+							<li>CountDocuments : <span id="db_ColDocCount">0</span></li>
+						</ul>
+						<hr></hr>
+						<h5>Sharding Information</h5>						
+						<hr></hr>
+						Key and Balance information
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+				<div class="card lobipanel-minimize">
+					<div class="card-header">
+						<div class="card-title">Collection Indexes</div>
+					</div>
+					<div class="card-body">
+						<div id="db_ColIndexes" class="" ><!-- indexes --></div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-5 col-lg-5 col-md-5 col-sm-12 col-12">
+				<div class="card lobipanel-minimize">
+					<div class="card-header">
+						<div class="card-title">Collection Settings</div>
+					</div>
+					<div class="card-body" id="db_ColSettings" class="d-none" ><!-- database/collection tree --></div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- cluster details -->
+		<div class="row gutters">
+			
+			<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+				<div class="card lobipanel-minimize">
+					<div class="card-header">
+						<div class="card-title">MongoDB Database/Collections</div>
+					</div>
+					<div class="card-body">
+
+						<div id="colDocLoading" class="spinner-border text-warning" style="display:none;">
+							<span class="sr-only">Loading...</span>
+						</div>
+						<!-- database/collection tree -->
+						<div id="db_ColDocs"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="module" src="/js/ajax/db.js"></script>
+<!-- Row ends -->

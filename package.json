@@ -1,0 +1,36 @@
+{
+  "name": "node_passport_login",
+  "version": "2.0.0",
+  "description": "Node.js authentication with Passport",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cli-color": "^2.0.0",
+    "compression": "^1.7.4",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
+    "errorhandler": "^1.5.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.15.6",
+    "express-url-breadcrumb": "^1.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^5.7.5",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-jwt-cookiecombo": "^1.0.5",
+    "passport-ldapauth": "^3.0.1",
+    "passport-local": "^1.0.0"
+  }
+}
